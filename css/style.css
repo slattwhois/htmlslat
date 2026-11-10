@@ -1,0 +1,248 @@
+/* Турагентство «Даль» — десктопная версия */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #1D2733;
+  background: #FFFFFF;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+  background: #0E4A8A;
+  padding: 16px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #F2A74B;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 16px;
+}
+
+.nav a:hover { color: #F2A74B; }
+
+/* Первый экран */
+.hero {
+  background: linear-gradient(rgba(14, 74, 138, 0.55), rgba(14, 74, 138, 0.55)), url('../img/hero.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 110px 0 90px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 14px;
+}
+
+.hero > .container > p {
+  font-size: 20px;
+  color: #E3EDF7;
+  margin-bottom: 40px;
+}
+
+/* Форма поиска */
+.search {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.search-field { flex: 1; }
+
+.search-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  color: #5A6B7D;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.search-field input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #C9D4DF;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.btn {
+  display: inline-block;
+  background: #F2A74B;
+  color: #1D2733;
+  border: none;
+  cursor: pointer;
+  padding: 13px 34px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.btn:hover { background: #E09535; }
+
+/* Секции */
+.section { padding: 72px 0; }
+
+.section-alt { background: #F0F5FA; }
+
+h2 {
+  font-size: 34px;
+  margin-bottom: 36px;
+}
+
+/* Карточки туров */
+.cards {
+  display: flex;
+  gap: 24px;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  width: calc(33.333% - 16px);
+  box-shadow: 0 3px 12px rgba(14, 74, 138, 0.15);
+  background: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body { padding: 20px; }
+
+.card-body p {
+  color: #5A6B7D;
+  font-size: 15px;
+  margin: 8px 0 14px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0E4A8A;
+}
+
+/* Преимущества */
+.features {
+  display: flex;
+  gap: 24px;
+}
+
+.feature {
+  width: calc(25% - 18px);
+  background: #fff;
+  border-radius: 10px;
+  padding: 26px;
+  border-top: 4px solid #F2A74B;
+}
+
+.feature h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: #5A6B7D;
+  font-size: 15px;
+}
+
+/* Подвал */
+.footer {
+  background: #0E4A8A;
+  color: #B8CCE0;
+  padding: 44px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer-col h4 {
+  color: #F2A74B;
+  margin-bottom: 12px;
+}
+
+.footer-col a { color: #fff; }
+
+@media (max-width: 768px) {
+
+.header-inner { 
+  flex-direction: column;
+}
+
+.nav a {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+.hero {
+    padding: 60px 0;
+}
+
+hero h1 {
+  padding: 30px;
+}
+
+.search { 
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.btn {
+  width: 100%;
+}
+
+.cards { 
+  flex-direction: column;
+}
+
+.card { 
+  width: 100%;
+}
+
+.features { 
+  flex-direction: column;
+}
+
+.feature { 
+  width: 100%; 
+}
+
+.footer-inner { 
+  flex-direction: column;
+  text-align: center; 
+}
+
+}
